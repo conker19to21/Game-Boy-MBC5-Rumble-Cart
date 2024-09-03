@@ -215,31 +215,6 @@ If you want a Bucket Mouse branded label for your cartridge, look no further tha
 
 ![image](https://github.com/MouseBiteLabs/Game-Boy-MBC5-Cartridge/assets/97127539/6ff3c8ef-356c-4162-9782-bd76befa0928)
 
-## Revision History
-
-### v1.4
-- Reduced cart edge by 0.1 mm for better fitment
-- Adjusted battery placement to support more battery holders
-- Added tabs on the board edges to allow the circuit board to fit better in aftermarket cartridge shells
-
-### v1.3
-- Extended cart edge down by 0.25 mm for better fitment
-- Added OSHW logo and "SUPPORT ORIGINAL CREATORS!"
-
-### v1.2
-- Replaced non-donor battery management circuitry with a TPS3613-based circuit for smaller BOM and easier routing
-  
-### v1.1
-- Moved all parts on the top down to allow for compatibility with DMG-style shells
-- Rotated battery for more space
-- Widen SRAM footprint for easier soldering
-- Renamed some reference designators for consistency between designs
-- Changed silkscreen for clarity
-- Removed multicart option
-
-### v1.0
-- Release revision
-
 ## Resources and Acknowledgements
 
 - <a href="http://www.devrs.com/gb/files/hardware.html">Jeff Frohwein's GameBoy Tech Page</a>
