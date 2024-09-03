@@ -1,6 +1,6 @@
 # Game Boy MBC5 Cartridge
 
-This is a flashable MBC5-based multicart for the Game Boy. You can make a 2-in-1 or 4-in-1 cartridge, that changes games based on a button press or power cycling the Game Boy. With this board you can also make a single game, but with the addition of a pressable reset button on the cartridge.
+This is a flashable MBC5-rumble based single cart for the Game Boy.
 
 I had adapted the DC rumble motor to the board to allow the option to have rumble availability. This does NOT make non rumble based games have rumble feedback.
 
@@ -25,10 +25,14 @@ Battery hold down is NOT included however can be aquired at the following 2 link
 
 <a href="https://www.digikey.com/short/4zrrw5rr"> RETAINER</a>
 
+When installing D1 make sure it is in the correct orientation with diode line inside white boxed outline as seen in photo:
+
+![image](https://github.com/conker19to21/Game-Boy-MBC5-Rumble-Cart/blob/main/IMG_5354.jpg)
+
 Special Thanks to Bucket Mouse, HDR and Bonzo!
 
-![image](https://github.com/conker19to21/Game-Boy-MBC5-Rumble-Multicart/blob/main/IMG_5336.jpg)
-![image](https://github.com/conker19to21/Game-Boy-MBC5-Rumble-Multicart/blob/main/IMG_5338.jpg)
+![image](https://github.com/conker19to21/Game-Boy-MBC5-Rumble-Cart/blob/main/IMG_5359.jpg)
+![image](https://github.com/conker19to21/Game-Boy-MBC5-Rumble-Cart/blob/main/IMG_5360.jpg)
 
 Please see below for the Mouse's original documentation.
 
