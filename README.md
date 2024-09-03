@@ -69,6 +69,8 @@ The zipped folder contains all the gerber files for this board. The following op
 - Surface Finish: ENIG
 - Gold Fingers: Yes, 30° chamfer
 
+You can use the zipped folder at any board fabricator you like.
+
 <a href="https://oshpark.com/shared_projects/T98aCJad">The board is also listed on OSH Park as well.</a> **Be sure to get them in 0.8mm thickness if you order from here.**
 
 ## Required Equipment
