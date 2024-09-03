@@ -1,5 +1,40 @@
 # Game Boy MBC5 Cartridge
 
+This is a flashable MBC5-based multicart for the Game Boy. You can make a 2-in-1 or 4-in-1 cartridge, that changes games based on a button press or power cycling the Game Boy. With this board you can also make a single game, but with the addition of a pressable reset button on the cartridge.
+
+I had adapted the DC rumble motor to the board to allow the option to have rumble availability. This does NOT make non rumble based games have rumble feedback.
+
+This board allows the option to allow both rumble and non rumble games in 1 cart with full save functionality!
+
+Original files were converted from Eagle to KiCad cleaned and modified to add the changes.
+
+Please note you will require either a Hot Air rework station or Hot Plate heating station to secure the DC motor properly to the board.
+
+The Rumble feature is optional and if you decide not to use it exclude the following:
+
+R2,
+R3,
+M1,
+D1,
+Q3
+
+
+Battery hold down is NOT included however can be aquired at the following 2 links:
+
+<a href="https://oshpark.com/shared_projects/XSjucPvH"> CR2Retainer</a>
+
+<a href="https://www.digikey.com/short/4zrrw5rr"> RETAINER</a>
+
+Special Thanks to Bucket Mouse, HDR and Bonzo!
+
+![image](https://github.com/conker19to21/Game-Boy-MBC5-Rumble-Multicart/blob/main/IMG_5336.jpg)
+![image](https://github.com/conker19to21/Game-Boy-MBC5-Rumble-Multicart/blob/main/IMG_5338.jpg)
+
+Please see below for the Mouse's original documentation.
+
+![image](https://private-user-images.githubusercontent.com/79350460/362808066-d0c1e5a3-aa70-49f6-8867-7be02a11127e.png?jwt=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmF3LmdpdGh1YnVzZXJjb250ZW50LmNvbSIsImtleSI6ImtleTUiLCJleHAiOjE3MjUxNzgzNjYsIm5iZiI6MTcyNTE3ODA2NiwicGF0aCI6Ii83OTM1MDQ2MC8zNjI4MDgwNjYtZDBjMWU1YTMtYWE3MC00OWY2LTg4NjctN2JlMDJhMTExMjdlLnBuZz9YLUFtei1BbGdvcml0aG09QVdTNC1ITUFDLVNIQTI1NiZYLUFtei1DcmVkZW50aWFsPUFLSUFWQ09EWUxTQTUzUFFLNFpBJTJGMjAyNDA5MDElMkZ1cy1lYXN0LTElMkZzMyUyRmF3czRfcmVxdWVzdCZYLUFtei1EYXRlPTIwMjQwOTAxVDA4MDc0NlomWC1BbXotRXhwaXJlcz0zMDAmWC1BbXotU2lnbmF0dXJlPTA1MjI0NGZjN2M0MmQwMzY3ZTIxMTJkNjZlNmY0YThiMWQ0MDJiY2EwYzVjMDg4ZDA5NmZlMzE5MmU4ZjRjODkmWC1BbXotU2lnbmVkSGVhZGVycz1ob3N0JmFjdG9yX2lkPTAma2V5X2lkPTAmcmVwb19pZD0wIn0.tLwJES8k5k2GEA-q7z0vVUgHWVOFACCc68rWR7xbyPs)
+
+
 This is my design of a flashable MBC5-based cartridge for the Game Boy. The MBC5 mapper greatly augments the memory access of the Game Boy for larger games. Most of the games that came out in the last years of the Game Boy and Game Boy Color used the MBC5 mapper.
 
 This circuit board should cover most MBC5 games. The features are as follows:
@@ -8,10 +43,6 @@ This circuit board should cover most MBC5 games. The features are as follows:
 - Compatibility with all four of the popular Game Boy battery management ICs - MM1026, MM1134, BA6129, and BA6735
 - The option to add battery backup to the cartridge *without* the need of the original battery management ICs - perfect for MBC5 donors that didn't have batteries in them
 - Fully compatible with the <a href="https://www.gbxcart.com/">GBxCart RW</a> so you can transfer games and save files to and from the board
-
-![assemblepic](https://github.com/MouseBiteLabs/Game-Boy-MBC5-Cartridge/assets/97127539/953b376a-4eeb-4a1c-9449-4dc011ae7a40)
-
-![boardscan3](https://github.com/MouseBiteLabs/Game-Boy-MBC5-Cartridge/assets/97127539/86953b12-cb63-4fe7-878b-eedf60f86023)
 
 All gerbers and source files can be found in this repo, as this project is fully open source. Technical documentation of the board can be found in the Technical folder.
 
@@ -135,7 +166,10 @@ Please carefully review the parts you need for the board you are trying to make.
 | C8                    | 0.1uF                          | 0603             | Capacitor (MLCC)   |               |                                  |                                  | X                                | [https://mou.sr/3ENc15O](https://mou.sr/3ENc15O) |
 | Q1                    | 2N7002                         | SOT-23           | N-Channel FET      |               |                                  |                                  | X                                | [https://mou.sr/3rgfh6J](https://mou.sr/3rgfh6J) |
 | Q2                    | 2N7002                         | SOT-23           | N-Channel FET      |               |                                  | X                                |                                  | [https://mou.sr/3rgfh6J](https://mou.sr/3rgfh6J) |
+| Q3                    | SN74AHC1G126                   | SC70             | NPN FET            | X             | X                                | X                                | X                                | [https://mou.sr/3YlwRnW](https://mou.sr/3YlwRnW) OR <a href="https://www.aliexpress.com/item/1005005140909500.html?spm=a2g0o.order_list.order_list_main.5.637818020QcNX1"> AliExpress</a>|
 | R1                    | 10k                            | 0603             | Resistor           |               | X                                | X                                | X                                | [https://mou.sr/3riR7IH](https://mou.sr/3riR7IH) |
+| R2                    | 15Ω                            | 0603             | Resistor           | X             | X                                | X                                | X                                | [https://mou.sr/3zYvyRE](https://mou.sr/3zYvyRE) OR <a href="https://www.aliexpress.us/item/2251832678021377.html?spm=a2g0o.order_list.order_list_main.68.31621802J8yZUJ&gatewayAdapt=glo2usa4itemAdapt"> AliExpress</a>|
+| R3                    | 30k                            | 0603             | Resistor           | X             | X                                | X                                | X                                | [https://mou.sr/46kfpCa](https://mou.sr/46kfpCa) OR <a href="https://www.aliexpress.us/item/2251832678021377.html?spm=a2g0o.order_list.order_list_main.68.31621802J8yZUJ&gatewayAdapt=glo2usa4itemAdapt"> AliExpress</a>||
 | R7                    | 10k                            | 0603             | Resistor           |               |                                  | X                                |                                  | [https://mou.sr/3riR7IH](https://mou.sr/3riR7IH) |
 | R8                    | 10k                            | 0603             | Resistor           | X             | X                                | X                                | X                                | [https://mou.sr/3riR7IH](https://mou.sr/3riR7IH) |
 | R9                    | 130k                           | 0603             | Resistor           |               |                                  |                                  | X                                | [https://mou.sr/3MjXliy](https://mou.sr/3MjXliy) |
@@ -145,6 +179,8 @@ Please carefully review the parts you need for the board you are trying to make.
 | U3                    | AS6C6264, AS6C62256, AS6C1008  | SOP-28, SOP-32   | SRAM               |               | X                                | X                                | X                                | [https://mou.sr/3ZxG6jd](https://mou.sr/3ZxG6jd) |
 | U4                    | MM1026, MM1134, BA6129, BA6735 | SOIC-8           | Battery Management |               | X                                | X                                |                                  | Donor Game Boy cartridge                         |
 | U5                    | TPS3613                        | MSOP-10          | Battery Management |               |                                  |                                  | X                                | https://mou.sr/45Ir2kh                           |
+| M1                    | Vibration Motor                | Z43              | DC Motor           | X             | X                                | X                                | X                                | <a href="https://www.aliexpress.com/item/32787320737.html"> AliExpress</a>|
+| D1                    |BC817-40                        | SOD-123          | Schottky diode     | X             | X                                | X                                | X                                | [https://mou.sr/3LEXYCJ](https://mou.sr/3LEXYCJ) OR <a href="https://www.aliexpress.com/item/1005003618692669.html?spm=a2g0o.order_list.order_list_main.5.31621802J8yZUJ"> AliExpress</a>|
 
 *Note that C9 - C11 footprints are only included on the board for strange edge cases that may require them sometime in the future; do not populate! See the technical design document for more information.*
 
